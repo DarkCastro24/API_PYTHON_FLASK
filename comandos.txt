@@ -1,0 +1,40 @@
+COMANDOS PARA EJECUTAR EL PROYECTO DESDE 0
+
+1. Ir al directorio del proyecto:
+cd "C:\Users\Diego\OneDrive\Desktop\API PYTHON CODE"
+
+2. Crear entorno virtual:
+python -m venv .venv
+
+3. Permitir ejecución de scripts si es necesario:
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned -Force
+
+4. Activar entorno virtual:
+.\.venv\Scripts\activate
+
+5. Instalar dependencias:
+pip install -r requirements.txt
+# O manualmente:
+# pip install Flask Flask-SQLAlchemy Flask-JWT-Extended pyodbc
+
+6. Instalar Driver ODBC 17 para SQL Server:
+https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server
+
+7. Crear base de datos 'crud' en SQL Server:
+CREATE DATABASE crud;
+
+8. Ejecutar la API:
+python app.py
+
+9. Endpoints disponibles:
+POST /register
+POST /login
+GET /users
+POST /users
+GET /users/<id>
+PUT /users/<id>
+DELETE /users/<id>
+
+Asegúrate de enviar el token JWT en cada petición protegida:
+Authorization: Bearer <token>
+
